@@ -16,6 +16,7 @@
 		2CE7395B8C39394FD03BFE65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE73C8BC361E6A01A225C73 /* Foundation.framework */; };
 		2CE739733A9A87B48C8A0063 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE73D269936639E14C91510 /* Spaceship.png */; };
 		2CE73AF2DE5E397D0B6D6642 /* SpriteKitGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE73755B2A741985D58085B /* SpriteKitGameTests.m */; };
+		2CE73B92F783FAD2E08B16E2 /* SPBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE73DBB08666A22E1E4EDCE /* SPBackground.m */; };
 		2CE73BC35CC882E1C3E1BB1D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE7308D7728AF389F25D257 /* SpriteKit.framework */; };
 		2CE73C0549D539D4015FC10F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE731084D0154493A2D94EB /* XCTest.framework */; };
 		2CE73CADE7DD34030C3A0893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE73C8BC361E6A01A225C73 /* Foundation.framework */; };
@@ -48,6 +49,7 @@
 		2CE7351FF3528C043F43E341 /* SPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAppDelegate.m; sourceTree = "<group>"; };
 		2CE73639E1E37C0967B98741 /* SPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPViewController.m; sourceTree = "<group>"; };
 		2CE73663F316F49459C5C4BE /* SPMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMyScene.h; sourceTree = "<group>"; };
+		2CE736E79E904CBC9668B292 /* SPBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBackground.h; sourceTree = "<group>"; };
 		2CE7373CCECF4C359C4E619F /* SpriteKitGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpriteKitGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE73755B2A741985D58085B /* SpriteKitGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKitGameTests.m; sourceTree = "<group>"; };
 		2CE738AF2742BDC3F0700FB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -55,12 +57,14 @@
 		2CE7399F11EE8D1933252FD7 /* SPMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMyScene.m; sourceTree = "<group>"; };
 		2CE73A7ACF3384CFB91EA782 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CE73A7CE5ED47CE9A316DC5 /* SpriteKitGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE73B5BD740338FB6560C84 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		2CE73B6F53349088ED1D9780 /* SPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPViewController.h; sourceTree = "<group>"; };
 		2CE73BD5173ECE5B16FDA2B5 /* SpriteKitGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SpriteKitGameTests-Info.plist"; sourceTree = "<group>"; };
 		2CE73C7168BBB9A70E6AE98E /* SpriteKitGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpriteKitGame-Prefix.pch"; sourceTree = "<group>"; };
 		2CE73C8BC361E6A01A225C73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CE73CC49F4BA37CAA44197B /* SpriteKitGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SpriteKitGame-Info.plist"; sourceTree = "<group>"; };
 		2CE73D269936639E14C91510 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		2CE73DBB08666A22E1E4EDCE /* SPBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBackground.m; sourceTree = "<group>"; };
 		2CE73F472EB34A6AB46844F9 /* SPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAppDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,9 @@
 				2CE73663F316F49459C5C4BE /* SPMyScene.h */,
 				2CE7399F11EE8D1933252FD7 /* SPMyScene.m */,
 				2CE73D269936639E14C91510 /* Spaceship.png */,
+				2CE73B5BD740338FB6560C84 /* Common.h */,
+				2CE73DBB08666A22E1E4EDCE /* SPBackground.m */,
+				2CE736E79E904CBC9668B292 /* SPBackground.h */,
 			);
 			path = SpriteKitGame;
 			sourceTree = "<group>";
@@ -211,6 +218,7 @@
 		2CE73413EB97286E317B9B14 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SP;
 				ORGANIZATIONNAME = Bimawa;
 			};
 			buildConfigurationList = 2CE730953D849533915CB886 /* Build configuration list for PBXProject "SpriteKitGame" */;
@@ -271,6 +279,7 @@
 				2CE73231284B32B5B5868EA7 /* SPAppDelegate.m in Sources */,
 				2CE73551335A6C8AB577F186 /* SPViewController.m in Sources */,
 				2CE73FD923D6E8D3D1FDA3F1 /* SPMyScene.m in Sources */,
+				2CE73B92F783FAD2E08B16E2 /* SPBackground.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
