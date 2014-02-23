@@ -6,4 +6,4 @@
 #import <Foundation/Foundation.h>
 
 static NSString *backgroundName = @"background";
-
+static NSInteger backgroundMoveSpeed = 30;

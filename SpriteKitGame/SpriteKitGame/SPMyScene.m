@@ -6,7 +6,12 @@
 //  Copyright (c) 2014 Bimawa. All rights reserved.
 //
 
+#import "SPBackground.h"
 #import "SPMyScene.h"
+
+@interface SPMyScene ()
+@property (nonatomic) CFTimeInterval lastUpdateTimeInterval;
+@end
 
 @implementation SPMyScene
 
@@ -16,7 +21,8 @@
     {
         /* Setup your scene here */
 
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+        self.currentBackground = [SPBackground generateNewBackground];
+        [self addChild:self.currentBackground];
 
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
 
@@ -25,6 +31,7 @@
         myLabel.name = @" theLabel";
                 myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                 CGRectGetMidY(self.frame));
+
 
         [self addChild:myLabel];
     }
@@ -53,12 +60,18 @@
 
 - (void)update:(CFTimeInterval)currentTime
 {
+    CFTimeInterval timeSinceLast = currentTime-self.lastUpdateTimeInterval;
+    self.lastUpdateTimeInterval = currentTime;
+    if (timeSinceLast > 1) { // more than a second since last update
+        timeSinceLast = 1.0 / 60.0;
+    }
+
     /* Called before each frame is rendered */
-    [self enumerateChildNodesWithName:@" theLabel" usingBlock:^(SKNode *node, BOOL *stop) {
+    [self enumerateChildNodesWithName:backgroundName usingBlock:^(SKNode *node, BOOL *stop) {
         node.position = CGPointMake(node.position.x - 2, node.position.y);
         if (node.position.x < -node.frame.size.width)
         {
-            node.position = CGPointMake(self.frame.size.width, node.position.y);
+            node.position = CGPointMake( node.position.x - backgroundMoveSpeed * timeSinceLast, node.position.y);
         }
     }];
 }
